@@ -19,7 +19,7 @@ handleAddCart=(product)=>{
     const {myCart, subTotal,tax}=this.state;
     this.setState({
         myCart:[...myCart,product],
-        subTotal:this.state.subTotal+Number(product.price),
+        subTotal:subTotal+Number(product.price),
         tax:tax+5*product.price/100
 
    })
@@ -36,7 +36,7 @@ handleAddCart=(product)=>{
         <div id="cart">
            <h1>Cart</h1>
            <ul>
-            {this.state.myCart.map(product=> <li key={product.id}>{product.name}: formatPrice(product.price)</li>)}
+            {this.state.myCart.map(product=> <li key={product.id}>{product.name}: ${formatPrice(product.price)}</li>)}
            </ul>
            <h3>Subtotal: {formatPrice(subTotal)}</h3>
            <h3>Tax: {formatPrice(tax)}</h3>

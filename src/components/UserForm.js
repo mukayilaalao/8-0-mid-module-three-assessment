@@ -42,7 +42,7 @@ class UserForm extends React.Component {
                   type="text"
                   name="fName"
                   value={fName}
-                  onClick={this.handleInput}
+                  onInput={this.handleInput}
                 />
                 <br/>
                 <label htmlFor="lname">Last Name</label>
@@ -52,7 +52,7 @@ class UserForm extends React.Component {
                   type="text"
                   name="lName"
                   value={lName}
-                  onClick={this.handleInput}
+                  onInput={this.handleInput}
                 />
                 <br/>
                 <label htmlFor="email">Email</label>
@@ -62,7 +62,7 @@ class UserForm extends React.Component {
                   type="text"
                   name="email"
                   value={email}
-                  onClick={this.handleInput}
+                  onInput={this.handleInput}
                 />
                 <br/>
                 <label htmlFor="credit-info">Credit Card</label>
@@ -72,7 +72,7 @@ class UserForm extends React.Component {
                   type="text"
                   name="cardInfo"
                   value={cardInfo}
-                  onClick={this.handleInput}
+                  onInput={this.handleInput}
                 />
                 <br/>
                 <label htmlFor="zip-code">Zip Code</label>
@@ -82,7 +82,7 @@ class UserForm extends React.Component {
                   type="text"
                   name="zipCode"
                   value={zipCode}
-                  onClick={this.handleInput}
+                  onInput={this.handleInput}
                 />
                 <br/>
                 <button type="submit">Buy Now</button>
