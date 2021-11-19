@@ -1,9 +1,22 @@
 #container {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  margin: 50px auto;
 }
 
-.garage {
+.products {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-left: 20px;
+}
+.product > * {
+  margin-top: 10px;
+}
+.products h1 {
+  grid-column: 1/-1;
+}
+.description {
+  width: 200px;
+  margin-top: 20px;
 }

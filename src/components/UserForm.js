@@ -23,7 +23,7 @@ class UserForm extends React.Component {
         const{fName,lName,email,cardInfo,zipCode}=this.state;
         if(fName&&lName&&email){
             if(zipCode.length===5&&cardInfo.length===16){
-                alert("Purchase complete");
+                alert("Purchase complete " + this.props.total);
             }
             else if(zipCode.length<5) alert("Zip code is not valid");
             else if(cardInfo.length<16) alert("Credit card number is not valid");
@@ -34,7 +34,7 @@ class UserForm extends React.Component {
     render() { 
         const{fName,lName,email,cardInfo,zipCode}=this.state;
         return (
-            <form onSubmit={this.handleOnSubmit}>
+            <form id="checkout" onSubmit={this.handleOnSubmit}>
                 <label htmlFor="fname">First Name</label>
                 <br/>
                 <input 
@@ -59,7 +59,7 @@ class UserForm extends React.Component {
                 <br/>
                 <input 
                   id="email"
-                  type="text"
+                  type="email"
                   name="email"
                   value={email}
                   onInput={this.handleInput}
