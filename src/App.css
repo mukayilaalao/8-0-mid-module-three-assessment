@@ -1,1 +1,9 @@
+#container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
 
+.garage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

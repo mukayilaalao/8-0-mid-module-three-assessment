@@ -12,7 +12,7 @@ class UserForm extends React.Component {
           zipCode:""
         }
     }
-    handleInput=()=>{
+    handleInput=(e)=>{
         this.setState({
             [e.target.name]:e.target.value
         })
@@ -36,6 +36,7 @@ class UserForm extends React.Component {
         return (
             <form onSubmit={this.handleOnSubmit}>
                 <label htmlFor="fname">First Name</label>
+                <br/>
                 <input 
                   id="fname"
                   type="text"
@@ -43,7 +44,9 @@ class UserForm extends React.Component {
                   value={fName}
                   onClick={this.handleInput}
                 />
+                <br/>
                 <label htmlFor="lname">Last Name</label>
+                <br/>
                 <input 
                   id="lname"
                   type="text"
@@ -51,7 +54,9 @@ class UserForm extends React.Component {
                   value={lName}
                   onClick={this.handleInput}
                 />
+                <br/>
                 <label htmlFor="email">Email</label>
+                <br/>
                 <input 
                   id="email"
                   type="text"
@@ -59,7 +64,9 @@ class UserForm extends React.Component {
                   value={email}
                   onClick={this.handleInput}
                 />
+                <br/>
                 <label htmlFor="credit-info">Credit Card</label>
+                <br/>
                 <input 
                   id="credit-info"
                   type="text"
@@ -67,7 +74,9 @@ class UserForm extends React.Component {
                   value={cardInfo}
                   onClick={this.handleInput}
                 />
+                <br/>
                 <label htmlFor="zip-code">Zip Code</label>
+                <br/>
                 <input 
                   id="zip-code"
                   type="text"
@@ -75,6 +84,7 @@ class UserForm extends React.Component {
                   value={zipCode}
                   onClick={this.handleInput}
                 />
+                <br/>
                 <button type="submit">Buy Now</button>
             </form>
         );
